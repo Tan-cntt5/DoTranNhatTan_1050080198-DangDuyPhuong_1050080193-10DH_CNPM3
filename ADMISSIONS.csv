@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ADMISSIONS.csv - MIMIC-III Clinical Database Demo</title>
+    
+    
+<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/static/font-awesome/css/all.css"/>
+<link rel="stylesheet" type="text/css" href="/static/custom/css/physionet.css"/>
+    
+<style>
+  .data-table {
+    margin: 0px;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+  }
+  .missing-newline-warning {
+    color: #f00;
+  }
+</style>
+
+    
+<script src="/static/jquery/jquery.min.js"></script>
+<script src="/static/popper/popper.min.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87592301-7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-87592301-7');
+</script>
+    
+    <link rel="shortcut icon" type="image/png" href="/static/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  
+  <body class="flexbody">
+    
+<nav class="navbar navbar-expand-md navbar-dark bg-dark d-flex justify-content-between" id="mainNav">
+	<label for="navicon" class="navbar-icon">&#9776;</label>
+	<input type="checkbox" id="navicon" class="navbar-check">
+
+	<a id="nav_home" class="navbar-brand" href="/">
+		PhysioNet
+	</a>
+
+	<div class="collapse navbar-collapse" id="navbarCollapse">
+		
+
+
+
+
+<ul class="navbar-nav mr-auto">
+
+  <li class="nav-item">
+    <a id="nav_index" class="nav-link" href="/content/">
+        Find
+    </a>
+  </li>
+
+  
+    
+      <li class="nav-item">
+        <a id="nav_share" class="nav-link" href="/about/publish/" >
+          Share
+        </a>
+      </li>
+    
+  
+    
+      <li class="nav-item">
+        <a id="nav_about" class="nav-link" href="/about/" >
+          About
+        </a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+
+  <li class="nav-item">
+    <a id="nav_news" class="nav-link" href="/news/">
+      News
+    </a>
+  </li>
+</ul>
+
+<ul class="navbar-nav ml-auto">
+  
+
+<ul class="navbar-nav ml-auto">
+  
+
+  <li class="nav-item dropdown">
+      
+          
+            <a class="nav-link dropdown-toggle" href="#" id="nav_account_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Account
+            </a>
+            <div class="dropdown-menu" aria-labelledby="nav_account_dropdown">
+                <a id="nav_login" class="dropdown-item" href="/login/">
+                  Login
+                </a>
+                <a id="nav_register" class="dropdown-item" href="/register/">
+                  Register
+                </a>
+            </div>
+          
+      
+  </li>
+</ul>
+
+	</div>
+
+	<div class="navbar-search">
+		<form class="form-inline" action="/content/">
+	    	<input name="topic" class="search-input" type="text" placeholder="Search">
+		    <span class="input-group-btn">
+		      <button id="search-button" type="submit" class="btn-search my-2 my-sm-0" title="Search PhysioNet"><span class="fa fa-search"><span class="visually-hidden">Search PhysioNet</span></span></button>
+		    </span>
+	 	</form>
+	</div>
+</nav>
+
+
+    <main>
+<div class="container-fluid">
+  
+    <h1>MIMIC-III Clinical Database Demo 1.4</h1>
+  
+  <div class="card">
+    <div class="card-header">
+      File:
+      <span class="dir-breadcrumbs"><a href="./#files-panel"
+                 class="dir-breadcrumb-up">&lt;base&gt;</a><span class="dir-breadcrumb-sep">/</span><span class="dir-breadcrumb-self">ADMISSIONS.csv</span></span>
+      (26,823 bytes)
+      <ul class="float-right mb-0 list-inline">
+        
+        <li class="list-inline-item">
+          <a class="btn btn-sm btn-secondary" href="/files/mimiciii-demo/1.4/ADMISSIONS.csv"
+             title="View this file as plain text">Plain</a>
+        </li>
+        
+        <li class="list-inline-item">
+          <a class="btn btn-sm btn-secondary" href="/files/mimiciii-demo/1.4/ADMISSIONS.csv?download"
+             title="Download this file">Download</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      
+<table class="data-table table-striped">
+  
+  <thead>
+    <tr><th>row_id</th><th>subject_id</th><th>hadm_id</th><th>admittime</th><th>dischtime</th><th>deathtime</th><th>admission_type</th><th>admission_location</th><th>discharge_location</th><th>insurance</th><th>language</th><th>religion</th><th>marital_status</th><th>ethnicity</th><th>edregtime</th><th>edouttime</th><th>diagnosis</th><th>hospital_expire_flag</th><th>has_chartevents_data</th></tr>
+  </thead>
+  
+  <tbody>
+    
+    <tr><td>12258</td><td>10006</td><td>142345</td><td>2164-10-23 21:09:00</td><td>2164-11-01 17:15:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME HEALTH CARE</td><td>Medicare</td><td></td><td>CATHOLIC</td><td>SEPARATED</td><td>BLACK/AFRICAN AMERICAN</td><td>2164-10-23 16:43:00</td><td>2164-10-23 23:00:00</td><td>SEPSIS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12263</td><td>10011</td><td>105331</td><td>2126-08-14 22:32:00</td><td>2126-08-28 18:59:00</td><td>2126-08-28 18:59:00</td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>DEAD/EXPIRED</td><td>Private</td><td></td><td>CATHOLIC</td><td>SINGLE</td><td>UNKNOWN/NOT SPECIFIED</td><td></td><td></td><td>HEPATITIS B</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12265</td><td>10013</td><td>165520</td><td>2125-10-04 23:36:00</td><td>2125-10-07 15:13:00</td><td>2125-10-07 15:13:00</td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>DEAD/EXPIRED</td><td>Medicare</td><td></td><td>CATHOLIC</td><td></td><td>UNKNOWN/NOT SPECIFIED</td><td></td><td></td><td>SEPSIS</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12269</td><td>10017</td><td>199207</td><td>2149-05-26 17:19:00</td><td>2149-06-03 18:42:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td></td><td>CATHOLIC</td><td>DIVORCED</td><td>WHITE</td><td>2149-05-26 12:08:00</td><td>2149-05-26 19:45:00</td><td>HUMERAL FRACTURE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12270</td><td>10019</td><td>177759</td><td>2163-05-14 20:43:00</td><td>2163-05-15 12:00:00</td><td>2163-05-15 12:00:00</td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>DEAD/EXPIRED</td><td>Medicare</td><td></td><td>CATHOLIC</td><td>DIVORCED</td><td>WHITE</td><td></td><td></td><td>ALCOHOLIC HEPATITIS</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12277</td><td>10026</td><td>103770</td><td>2195-05-17 07:39:00</td><td>2195-05-24 11:45:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>REHAB/DISTINCT PART HOSP</td><td>Medicare</td><td></td><td>OTHER</td><td></td><td>WHITE</td><td>2195-05-17 01:49:00</td><td>2195-05-17 08:29:00</td><td>STROKE/TIA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12278</td><td>10027</td><td>199395</td><td>2190-07-13 07:15:00</td><td>2190-07-25 14:00:00</td><td></td><td>ELECTIVE</td><td>PHYS REFERRAL/NORMAL DELI</td><td>SNF</td><td>Medicare</td><td></td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td></td><td></td><td> MITRAL REGURGITATION;CORONARY ARTERY DISEASE\CORONARY ARTERY BYPASS GRAFT WITH MVR  ? MITRAL VALVE REPLACEMENT /SDA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12280</td><td>10029</td><td>132349</td><td>2139-09-22 10:58:00</td><td>2139-10-02 14:29:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td></td><td>PROTESTANT QUAKER</td><td>DIVORCED</td><td>WHITE</td><td>2139-09-22 06:03:00</td><td>2139-09-22 11:50:00</td><td>SYNCOPE;TELEMETRY</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12282</td><td>10032</td><td>140372</td><td>2138-04-02 19:52:00</td><td>2138-04-15 14:35:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>REHAB/DISTINCT PART HOSP</td><td>Medicare</td><td></td><td>CATHOLIC</td><td>WIDOWED</td><td>WHITE</td><td>2138-04-02 14:56:00</td><td>2138-04-02 20:40:00</td><td>RIGHT HUMEROUS FRACTURE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12283</td><td>10033</td><td>157235</td><td>2132-12-05 02:46:00</td><td>2132-12-08 15:15:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>POLI</td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td>2132-12-04 20:11:00</td><td>2132-12-05 04:05:00</td><td>RENAL FAILIURE-SYNCOPE-HYPERKALEMIA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12285</td><td>10035</td><td>110244</td><td>2129-03-03 16:06:00</td><td>2129-03-07 18:19:00</td><td></td><td>ELECTIVE</td><td>PHYS REFERRAL/NORMAL DELI</td><td>HOME</td><td>Medicare</td><td></td><td>NOT SPECIFIED</td><td>MARRIED</td><td>WHITE</td><td></td><td></td><td>RECURRENT LEFT CAROTID STENOSIS,PRE HYDRATION</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12286</td><td>10036</td><td>189483</td><td>2185-03-24 16:56:00</td><td>2185-03-26 09:15:00</td><td>2185-03-26 09:15:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td></td><td>JEWISH</td><td>MARRIED</td><td>WHITE</td><td>2185-03-24 12:38:00</td><td>2185-03-24 19:14:00</td><td>SEPSIS</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12288</td><td>10038</td><td>111115</td><td>2144-02-09 17:53:00</td><td>2144-02-21 13:30:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>ENGL</td><td>CATHOLIC</td><td>WIDOWED</td><td>WHITE</td><td>2144-02-09 13:35:00</td><td>2144-02-09 20:12:00</td><td>FAILURE TO THRIVE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12290</td><td>10040</td><td>157839</td><td>2147-02-23 11:43:00</td><td>2147-02-27 16:19:00</td><td></td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>REHAB/DISTINCT PART HOSP</td><td>Medicare</td><td></td><td>UNOBTAINABLE</td><td></td><td>UNKNOWN/NOT SPECIFIED</td><td></td><td></td><td>PULMONARY EDEMA\CATH</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12292</td><td>10042</td><td>148562</td><td>2147-02-06 12:38:00</td><td>2147-02-17 19:00:00</td><td></td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>HOME HEALTH CARE</td><td>Medicare</td><td></td><td>UNOBTAINABLE</td><td></td><td>WHITE</td><td></td><td></td><td>UNSTABLE ANGINA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12293</td><td>10043</td><td>168674</td><td>2185-04-14 00:23:00</td><td>2185-04-26 18:20:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td></td><td>CATHOLIC</td><td></td><td>WHITE</td><td>2185-04-13 23:01:00</td><td>2185-04-14 02:56:00</td><td>RESPIRATORY DISTRESS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12294</td><td>10044</td><td>124073</td><td>2152-10-02 16:24:00</td><td>2152-10-11 15:42:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME</td><td>Medicare</td><td></td><td>UNOBTAINABLE</td><td>UNKNOWN (DEFAULT)</td><td>UNKNOWN/NOT SPECIFIED</td><td>2152-10-02 10:58:00</td><td>2152-10-03 04:34:00</td><td>METASTATIC MELANOMA;BRAIN METASTASIS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12295</td><td>10045</td><td>126949</td><td>2129-11-24 00:31:00</td><td>2129-12-01 01:45:00</td><td>2129-12-01 01:45:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td></td><td>PROTESTANT QUAKER</td><td>MARRIED</td><td>WHITE</td><td>2129-11-23 18:26:00</td><td>2129-11-24 01:35:00</td><td>FEVER</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12296</td><td>10046</td><td>133110</td><td>2194-07-26 23:43:00</td><td>2194-08-06 15:12:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>REHAB/DISTINCT PART HOSP</td><td>Medicaid</td><td></td><td>CATHOLIC</td><td>SINGLE</td><td>WHITE</td><td>2194-07-26 19:40:00</td><td>2194-07-27 01:46:00</td><td>BRAIN METASTASES</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12305</td><td>10056</td><td>100375</td><td>2129-05-02 00:12:00</td><td>2129-05-06 13:40:00</td><td></td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>SNF</td><td>Medicare</td><td></td><td>CHRISTIAN SCIENTIST</td><td>UNKNOWN (DEFAULT)</td><td>WHITE</td><td></td><td></td><td>SEPSIS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12308</td><td>10059</td><td>142582</td><td>2150-08-07 21:40:00</td><td>2150-08-13 11:33:00</td><td></td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>HOME</td><td>Medicare</td><td></td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td></td><td></td><td>VARICEAL BLEED</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12309</td><td>10059</td><td>122098</td><td>2150-08-22 17:33:00</td><td>2150-08-29 18:20:00</td><td>2150-08-29 18:20:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td></td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td>2150-08-22 14:55:00</td><td>2150-08-22 18:00:00</td><td>LOWER GI BLEED</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12311</td><td>10061</td><td>145203</td><td>2107-01-16 11:33:00</td><td>2107-02-10 11:30:00</td><td></td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>REHAB/DISTINCT PART HOSP</td><td>Medicare</td><td></td><td>CATHOLIC</td><td>WIDOWED</td><td>WHITE</td><td></td><td></td><td>CHEST PAIN/ CATH</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12314</td><td>10064</td><td>111761</td><td>2127-03-19 14:39:00</td><td>2127-03-19 18:09:00</td><td>2127-03-19 18:09:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td></td><td>UNOBTAINABLE</td><td></td><td>WHITE</td><td>2127-03-19 12:54:00</td><td>2127-03-19 15:39:00</td><td>SUBDURAL HEMATOMA/S/P FALL</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12315</td><td>10065</td><td>183314</td><td>2189-09-08 07:15:00</td><td>2189-09-20 14:00:00</td><td></td><td>ELECTIVE</td><td>PHYS REFERRAL/NORMAL DELI</td><td>SNF</td><td>Private</td><td>ENGL</td><td>CATHOLIC</td><td>SINGLE</td><td>WHITE</td><td></td><td></td><td>ESOPHAGEAL CANCER/SDA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12317</td><td>10067</td><td>160442</td><td>2130-10-06 01:34:00</td><td>2130-10-06 02:29:00</td><td>2130-10-06 02:29:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Private</td><td></td><td>UNOBTAINABLE</td><td></td><td>OTHER</td><td>2130-10-06 00:12:00</td><td>2130-10-06 01:30:00</td><td>S/P MOTORCYCLE ACCIDENT</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12319</td><td>10069</td><td>146672</td><td>2188-02-08 11:15:00</td><td>2188-02-27 18:41:00</td><td>2188-02-27 18:41:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicaid</td><td></td><td></td><td></td><td>UNKNOWN/NOT SPECIFIED</td><td>2188-02-07 15:50:00</td><td>2188-02-08 12:00:00</td><td>SEIZURE</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12324</td><td>10074</td><td>170119</td><td>2167-02-11 22:10:00</td><td>2167-02-19 15:30:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME</td><td>Medicare</td><td></td><td>OTHER</td><td>MARRIED</td><td>WHITE</td><td>2167-02-11 19:11:00</td><td>2167-02-11 22:52:00</td><td>GASTROINTESTINAL BLEED</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12326</td><td>10076</td><td>198503</td><td>2107-03-21 21:16:00</td><td>2107-03-30 12:00:00</td><td>2107-03-30 12:00:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>MAND</td><td>NOT SPECIFIED</td><td>MARRIED</td><td>ASIAN</td><td>2107-03-21 17:24:00</td><td>2107-03-22 01:12:00</td><td>LUNG CANCER;SHORTNESS OF BREATH</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12332</td><td>10083</td><td>134993</td><td>2192-11-20 04:34:00</td><td>2192-12-07 16:30:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOSPICE-HOME</td><td>Medicare</td><td></td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td>2192-11-19 21:06:00</td><td>2192-11-20 05:43:00</td><td>HYPOTENSION</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12337</td><td>10088</td><td>169938</td><td>2107-01-04 11:59:00</td><td>2107-01-11 15:45:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td></td><td>UNOBTAINABLE</td><td>UNKNOWN (DEFAULT)</td><td>WHITE</td><td>2107-01-04 21:47:00</td><td>2107-01-05 01:38:00</td><td>SEPSIS;PNEUMONIA;TELEMETRY</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12338</td><td>10088</td><td>168233</td><td>2107-01-29 04:00:00</td><td>2107-02-10 12:00:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td></td><td>UNOBTAINABLE</td><td>UNKNOWN (DEFAULT)</td><td>WHITE</td><td>2107-01-29 01:58:00</td><td>2107-01-29 05:46:00</td><td>CONGESTIVE HEART FAILURE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12339</td><td>10088</td><td>149044</td><td>2107-05-12 18:00:00</td><td>2107-05-18 13:30:00</td><td></td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>SNF</td><td>Private</td><td></td><td>UNOBTAINABLE</td><td>UNKNOWN (DEFAULT)</td><td>WHITE</td><td></td><td></td><td>UROSEPSIS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12340</td><td>10089</td><td>190301</td><td>2132-08-05 18:48:00</td><td>2132-08-08 02:15:00</td><td>2132-08-08 02:15:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td></td><td>UNOBTAINABLE</td><td></td><td>WHITE</td><td>2132-08-05 14:38:00</td><td>2132-08-05 22:07:00</td><td>BASAL GANGLIN BLEED</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12341</td><td>10090</td><td>176805</td><td>2124-01-12 14:26:00</td><td>2124-01-14 19:00:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DISCH-TRAN TO PSYCH HOSP</td><td>Private</td><td>ENGL</td><td>NOT SPECIFIED</td><td>SINGLE</td><td>WHITE</td><td>2124-01-12 11:56:00</td><td>2124-01-12 16:09:00</td><td>OVERDOSE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12344</td><td>10093</td><td>165393</td><td>2141-01-25 08:35:00</td><td>2141-01-26 03:05:00</td><td>2141-01-26 03:05:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td></td><td>UNOBTAINABLE</td><td>WIDOWED</td><td>WHITE</td><td>2141-01-25 07:10:00</td><td>2141-01-25 10:06:00</td><td>CRITICAL AORTIC STENOSIS/HYPOTENSION</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12345</td><td>10094</td><td>168074</td><td>2180-02-29 18:54:00</td><td>2180-03-10 17:35:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td></td><td>UNOBTAINABLE</td><td></td><td>BLACK/AFRICAN AMERICAN</td><td>2180-02-29 12:40:00</td><td>2180-02-29 21:53:00</td><td>HYPOTENSION;TELEMETRY</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12346</td><td>10094</td><td>122928</td><td>2180-03-15 22:35:00</td><td>2180-03-20 18:00:00</td><td>2180-03-20 18:00:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td></td><td>UNOBTAINABLE</td><td></td><td>BLACK/AFRICAN AMERICAN</td><td>2180-03-15 17:14:00</td><td>2180-03-16 00:58:00</td><td>SEPSIS;TELEMETRY</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12349</td><td>10098</td><td>180685</td><td>2170-12-02 23:24:00</td><td>2170-12-03 15:55:00</td><td>2170-12-03 15:55:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Private</td><td></td><td>UNOBTAINABLE</td><td></td><td>OTHER</td><td>2170-12-02 22:45:00</td><td>2170-12-03 00:56:00</td><td>STATUS POST MOTOR VEHICLE ACCIDENT WITH INJURIES</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12352</td><td>10101</td><td>142539</td><td>2128-03-22 17:37:00</td><td>2128-03-24 19:00:00</td><td>2128-03-24 19:00:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Government</td><td></td><td>NOT SPECIFIED</td><td>MARRIED</td><td>WHITE</td><td>2128-03-22 11:23:00</td><td>2128-03-22 19:31:00</td><td>TACHYPNEA;TELEMETRY</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12353</td><td>10102</td><td>164869</td><td>2105-05-29 18:18:00</td><td>2105-06-11 02:20:00</td><td>2105-06-11 02:20:00</td><td>EMERGENCY</td><td>CLINIC REFERRAL/PREMATURE</td><td>DEAD/EXPIRED</td><td>Medicare</td><td></td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td></td><td></td><td>CHRONIC MYELOGENOUS LEUKEMIA;TRANSFUSION REACTION</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12355</td><td>10104</td><td>177678</td><td>2120-08-24 17:39:00</td><td>2120-08-31 13:12:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td></td><td>BUDDHIST</td><td>MARRIED</td><td>ASIAN</td><td>2120-08-24 15:08:00</td><td>2120-08-24 23:31:00</td><td>HYPONATREMIA;URINARY TRACT INFECTION</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12357</td><td>10106</td><td>133283</td><td>2161-09-14 22:22:00</td><td>2161-09-19 17:00:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME WITH HOME IV PROVIDR</td><td>Private</td><td></td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td>2161-09-14 14:45:00</td><td>2161-09-15 01:30:00</td><td>HEADACHE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12362</td><td>10111</td><td>174739</td><td>2180-01-14 18:42:00</td><td>2180-02-01 17:17:00</td><td>2180-02-01 17:17:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td></td><td>CATHOLIC</td><td>WIDOWED</td><td>BLACK/AFRICAN AMERICAN</td><td>2180-01-14 15:14:00</td><td>2180-01-14 19:20:00</td><td>CONGESTIVE HEART FAILURE</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12363</td><td>10112</td><td>188574</td><td>2148-01-13 22:32:00</td><td>2148-01-19 15:03:00</td><td>2148-01-19 15:03:00</td><td>URGENT</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>DEAD/EXPIRED</td><td>Medicare</td><td></td><td>PROTESTANT QUAKER</td><td>DIVORCED</td><td>WHITE</td><td></td><td></td><td>VF ARREST </td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12365</td><td>10114</td><td>167957</td><td>2171-10-30 19:03:00</td><td>2171-11-06 14:59:00</td><td></td><td>URGENT</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>HOME HEALTH CARE</td><td>Private</td><td></td><td>PROTESTANT QUAKER</td><td>MARRIED</td><td>UNKNOWN/NOT SPECIFIED</td><td></td><td></td><td>PULMONARY EDEMA, MI</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12368</td><td>10117</td><td>187023</td><td>2138-06-05 17:23:00</td><td>2138-06-11 10:16:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME</td><td>Private</td><td></td><td>CATHOLIC</td><td>SINGLE</td><td>UNKNOWN/NOT SPECIFIED</td><td>2138-06-05 11:42:00</td><td>2138-06-05 21:20:00</td><td>FEVER</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12369</td><td>10117</td><td>105150</td><td>2138-11-09 18:08:00</td><td>2138-11-18 23:13:00</td><td>2138-11-18 23:13:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Private</td><td></td><td>CATHOLIC</td><td>SINGLE</td><td>UNKNOWN/NOT SPECIFIED</td><td>2138-11-09 15:42:00</td><td>2138-11-09 20:42:00</td><td>FEVER</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12371</td><td>10119</td><td>157466</td><td>2117-08-05 18:27:00</td><td>2117-08-19 16:15:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>REHAB/DISTINCT PART HOSP</td><td>Medicare</td><td>ENGL</td><td>NOT SPECIFIED</td><td>MARRIED</td><td>WHITE</td><td>2117-08-05 12:10:00</td><td>2117-08-05 19:48:00</td><td>ACUTE CHOLECYSTITIS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12372</td><td>10119</td><td>165436</td><td>2117-08-21 06:58:00</td><td>2117-08-26 13:00:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>REHAB/DISTINCT PART HOSP</td><td>Medicare</td><td>ENGL</td><td>NOT SPECIFIED</td><td>MARRIED</td><td>WHITE</td><td>2117-08-21 05:00:00</td><td>2117-08-21 09:20:00</td><td>GASTROINTESTINAL BLEED</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12373</td><td>10120</td><td>193924</td><td>2115-05-12 14:52:00</td><td>2115-05-15 02:15:00</td><td>2115-05-15 02:15:00</td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>DEAD/EXPIRED</td><td>Medicaid</td><td></td><td>OTHER</td><td>SINGLE</td><td>UNKNOWN/NOT SPECIFIED</td><td></td><td></td><td>LIVER FAILURE</td><td>1</td><td>0</td></tr>
+    
+    <tr><td>12377</td><td>10124</td><td>182664</td><td>2192-03-26 15:30:00</td><td>2192-04-05 14:21:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>RUSS</td><td>JEWISH</td><td>WIDOWED</td><td>WHITE</td><td>2192-03-26 10:58:00</td><td>2192-03-26 16:48:00</td><td>LEFT HIP FRACTURE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12378</td><td>10124</td><td>170883</td><td>2192-04-16 20:57:00</td><td>2192-05-15 19:28:00</td><td>2192-05-15 19:28:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>RUSS</td><td>JEWISH</td><td>WIDOWED</td><td>WHITE</td><td>2192-04-16 11:51:00</td><td>2192-04-16 21:38:00</td><td>CONGESTIVE HEART FAILURE</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12381</td><td>10126</td><td>160445</td><td>2171-07-12 06:02:00</td><td>2171-08-16 12:00:00</td><td>2171-08-16 12:00:00</td><td>EMERGENCY</td><td>PHYS REFERRAL/NORMAL DELI</td><td>DEAD/EXPIRED</td><td>Private</td><td></td><td>UNOBTAINABLE</td><td>SINGLE</td><td>WHITE</td><td></td><td></td><td>LIVER FAILURE</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>12382</td><td>10127</td><td>182839</td><td>2198-06-28 05:34:00</td><td>2198-07-20 14:56:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>REHAB/DISTINCT PART HOSP</td><td>Private</td><td></td><td>NOT SPECIFIED</td><td></td><td>WHITE</td><td>2198-06-28 04:28:00</td><td>2198-06-28 05:52:00</td><td>S/P MOTOR VEHICLE ACCIDENT</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12385</td><td>10130</td><td>156668</td><td>2161-01-30 16:26:00</td><td>2161-02-19 14:05:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME HEALTH CARE</td><td>Private</td><td></td><td>CATHOLIC</td><td>MARRIED</td><td>UNKNOWN/NOT SPECIFIED</td><td>2161-01-30 10:35:00</td><td>2161-01-30 20:25:00</td><td>ABSCESS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>12387</td><td>10132</td><td>197611</td><td>2123-08-23 20:00:00</td><td>2123-09-17 14:00:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME HEALTH CARE</td><td>Medicare</td><td></td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td>2123-08-23 11:35:00</td><td>2123-08-23 20:50:00</td><td>NON SMALL CELL CANCER;HYPOXIA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>39821</td><td>40124</td><td>126179</td><td>2130-02-04 02:26:00</td><td>2130-02-10 17:39:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>ENGL</td><td>CATHOLIC</td><td>SINGLE</td><td>WHITE</td><td>2130-02-04 00:20:00</td><td>2130-02-04 04:09:00</td><td>SHORTNESS OF BREATH</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>39822</td><td>40124</td><td>146893</td><td>2130-08-12 05:49:00</td><td>2130-08-18 15:30:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>ENGL</td><td>CATHOLIC</td><td>SINGLE</td><td>WHITE</td><td>2130-08-12 04:36:00</td><td>2130-08-12 08:38:00</td><td>PNEUMONIA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>39830</td><td>40177</td><td>198480</td><td>2169-05-06 23:16:00</td><td>2169-05-12 08:54:00</td><td>2169-05-12 08:54:00</td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>ENGL</td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td></td><td></td><td>ACUTE CHOLANGITIS</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>39840</td><td>40204</td><td>175237</td><td>2155-12-16 16:20:00</td><td>2155-12-24 14:39:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>REHAB/DISTINCT PART HOSP</td><td>Medicare</td><td>ENGL</td><td>CHRISTIAN SCIENTIST</td><td>MARRIED</td><td>BLACK/AFRICAN AMERICAN</td><td>2155-12-16 12:57:00</td><td>2155-12-16 18:12:00</td><td>FEVER;URINARY TRACT INFECTION</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>39858</td><td>40277</td><td>127703</td><td>2151-08-13 02:23:00</td><td>2151-08-17 19:00:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME</td><td>Medicare</td><td>ENGL</td><td>NOT SPECIFIED</td><td>WIDOWED</td><td>WHITE</td><td>2151-08-12 21:04:00</td><td>2151-08-13 04:07:00</td><td>SYNCOPE;TELEMETRY;INTRACRANIAL HEMORRHAGE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>39859</td><td>40286</td><td>109698</td><td>2193-10-15 07:15:00</td><td>2193-10-20 13:18:00</td><td></td><td>ELECTIVE</td><td>PHYS REFERRAL/NORMAL DELI</td><td>REHAB/DISTINCT PART HOSP</td><td>Medicare</td><td>ENGL</td><td>PROTESTANT QUAKER</td><td>DIVORCED</td><td>WHITE</td><td></td><td></td><td>LEFT HIP OA/SDA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>39866</td><td>40304</td><td>174997</td><td>2163-11-21 18:34:00</td><td>2163-12-01 11:00:00</td><td></td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>SNF</td><td>Medicare</td><td>ENGL</td><td>PROTESTANT QUAKER</td><td>MARRIED</td><td>WHITE</td><td></td><td></td><td>MEDIASTINAL ADENOPATHY</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>39869</td><td>40310</td><td>186361</td><td>2144-07-11 15:02:00</td><td>2144-11-12 14:40:00</td><td></td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>REHAB/DISTINCT PART HOSP</td><td>Private</td><td>ENGL</td><td>CATHOLIC</td><td>SINGLE</td><td>WHITE</td><td></td><td></td><td>FACIAL NUMBNESS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>39870</td><td>40310</td><td>157609</td><td>2144-12-24 16:16:00</td><td>2144-12-31 16:40:00</td><td>2144-12-31 16:40:00</td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>DEAD/EXPIRED</td><td>Medicaid</td><td>ENGL</td><td>CATHOLIC</td><td>SINGLE</td><td>WHITE</td><td></td><td></td><td>AROMEGLEY;BURKITTS LYMPHOMA</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>39907</td><td>40456</td><td>161765</td><td>2118-10-06 16:25:00</td><td>2118-10-09 13:30:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME</td><td>Medicare</td><td>ENGL</td><td>CATHOLIC</td><td>WIDOWED</td><td>WHITE</td><td>2118-10-06 14:01:00</td><td>2118-10-06 17:27:00</td><td>PNEUMONIA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>39929</td><td>40503</td><td>168803</td><td>2186-07-06 19:59:00</td><td>2186-07-07 19:00:00</td><td>2186-07-07 19:00:00</td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>ENGL</td><td>UNOBTAINABLE</td><td>DIVORCED</td><td>WHITE</td><td></td><td></td><td>STEMI;</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>39958</td><td>40595</td><td>116518</td><td>2144-10-15 10:46:00</td><td>2144-10-24 09:00:00</td><td></td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>LONG TERM CARE HOSPITAL</td><td>Medicare</td><td>ENGL</td><td>JEWISH</td><td>MARRIED</td><td>WHITE</td><td></td><td></td><td>TRACHEAL ESOPHAGEAL FISTULA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>39962</td><td>40601</td><td>182879</td><td>2184-08-04 05:44:00</td><td>2184-08-10 15:30:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Private</td><td>ENGL</td><td>PROTESTANT QUAKER</td><td>MARRIED</td><td>WHITE</td><td>2184-08-04 01:35:00</td><td>2184-08-04 06:47:00</td><td>SEPSIS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>39966</td><td>40612</td><td>104697</td><td>2159-11-17 03:28:00</td><td>2159-11-22 14:15:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>SPAN</td><td>NOT SPECIFIED</td><td>SINGLE</td><td>HISPANIC OR LATINO</td><td>2159-11-16 23:51:00</td><td>2159-11-17 04:21:00</td><td>CHOLECYSTITIS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>39974</td><td>40655</td><td>126002</td><td>2144-07-18 19:32:00</td><td>2144-07-28 14:41:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>ENGL</td><td>JEWISH</td><td>WIDOWED</td><td>WHITE</td><td>2144-07-18 14:53:00</td><td>2144-07-19 00:10:00</td><td>CELLULITIS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>39980</td><td>40687</td><td>129273</td><td>2155-03-08 02:35:00</td><td>2155-03-11 15:00:00</td><td>2155-03-12 15:00:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>ENGL</td><td>NOT SPECIFIED</td><td>WIDOWED</td><td>WHITE</td><td>2155-03-07 18:24:00</td><td>2155-03-08 03:45:00</td><td>ABDOMINAL PAIN</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>40349</td><td>41795</td><td>138132</td><td>2145-07-07 01:19:00</td><td>2145-07-20 19:15:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>ENGL</td><td>NOT SPECIFIED</td><td>MARRIED</td><td>WHITE</td><td>2145-07-06 22:59:00</td><td>2145-07-07 02:16:00</td><td>ASTHMA;CHRONIC OBST PULM DISEASE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40350</td><td>41795</td><td>118192</td><td>2145-09-06 08:52:00</td><td>2145-09-09 16:25:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>ENGL</td><td>NOT SPECIFIED</td><td>MARRIED</td><td>WHITE</td><td>2145-09-05 22:24:00</td><td>2145-09-06 10:14:00</td><td>ASTHMA;CHRONIC OBST PULM DISEASE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40379</td><td>41914</td><td>101361</td><td>2145-12-01 18:13:00</td><td>2145-12-18 17:45:00</td><td></td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>REHAB/DISTINCT PART HOSP</td><td>Medicare</td><td>ENGL</td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td></td><td></td><td>ELEVATED LIVER FUNCTIONS;S/P LIVER TRANSPLANT</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40396</td><td>41976</td><td>125449</td><td>2198-10-29 06:54:00</td><td>2198-11-05 15:20:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>SPAN</td><td>CATHOLIC</td><td>MARRIED</td><td>HISPANIC/LATINO - PUERTO RICAN</td><td>2198-10-29 01:26:00</td><td>2198-10-29 08:27:00</td><td>PNEUMONIA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40397</td><td>41976</td><td>173269</td><td>2199-01-13 17:13:00</td><td>2199-01-16 15:23:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>SPAN</td><td>CATHOLIC</td><td>MARRIED</td><td>HISPANIC/LATINO - PUERTO RICAN</td><td>2199-01-13 15:01:00</td><td>2199-01-13 19:12:00</td><td>HYPOTENSION;UNRESPONSIVE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40398</td><td>41976</td><td>176016</td><td>2199-01-31 22:26:00</td><td>2199-02-14 13:22:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>SPAN</td><td>CATHOLIC</td><td>MARRIED</td><td>HISPANIC/LATINO - PUERTO RICAN</td><td>2199-01-31 17:37:00</td><td>2199-02-01 02:06:00</td><td>SEPSIS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40399</td><td>41976</td><td>172082</td><td>2200-03-17 20:32:00</td><td>2200-03-28 17:00:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>SPAN</td><td>CATHOLIC</td><td>MARRIED</td><td>HISPANIC/LATINO - PUERTO RICAN</td><td>2200-03-17 18:34:00</td><td>2200-03-17 22:14:00</td><td>PNEUMONIA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40400</td><td>41976</td><td>152032</td><td>2200-06-09 16:14:00</td><td>2200-06-13 18:10:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>SPAN</td><td>CATHOLIC</td><td>MARRIED</td><td>HISPANIC/LATINO - PUERTO RICAN</td><td>2200-06-09 14:13:00</td><td>2200-06-09 15:39:00</td><td>PNEUMONIA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40401</td><td>41976</td><td>130681</td><td>2200-10-29 20:46:00</td><td>2200-11-03 18:45:00</td><td></td><td>EMERGENCY</td><td>CLINIC REFERRAL/PREMATURE</td><td>SNF</td><td>Medicare</td><td>SPAN</td><td>CATHOLIC</td><td>MARRIED</td><td>HISPANIC/LATINO - PUERTO RICAN</td><td>2200-10-29 16:44:00</td><td>2200-10-29 22:20:00</td><td>FEVER</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40402</td><td>41976</td><td>180546</td><td>2201-05-12 10:49:00</td><td>2201-05-19 14:04:00</td><td></td><td>EMERGENCY</td><td>CLINIC REFERRAL/PREMATURE</td><td>ICF</td><td>Medicare</td><td>SPAN</td><td>CATHOLIC</td><td>MARRIED</td><td>HISPANIC/LATINO - PUERTO RICAN</td><td>2201-05-12 08:56:00</td><td>2201-05-12 13:57:00</td><td>SEPSIS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40403</td><td>41976</td><td>174863</td><td>2201-08-10 23:00:00</td><td>2201-08-13 16:55:00</td><td></td><td>EMERGENCY</td><td>CLINIC REFERRAL/PREMATURE</td><td>SNF</td><td>Medicare</td><td>SPAN</td><td>CATHOLIC</td><td>MARRIED</td><td>HISPANIC/LATINO - PUERTO RICAN</td><td>2201-08-10 16:59:00</td><td>2201-08-11 00:41:00</td><td>URINARY TRACT INFECTION;PYELONEPHRITIS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40404</td><td>41976</td><td>125013</td><td>2201-09-28 16:47:00</td><td>2201-10-01 15:53:00</td><td></td><td>EMERGENCY</td><td>CLINIC REFERRAL/PREMATURE</td><td>LONG TERM CARE HOSPITAL</td><td>Medicare</td><td>SPAN</td><td>CATHOLIC</td><td>MARRIED</td><td>HISPANIC/LATINO - PUERTO RICAN</td><td>2201-09-28 14:24:00</td><td>2201-09-28 18:31:00</td><td>SEPSIS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40405</td><td>41976</td><td>155297</td><td>2201-11-16 23:00:00</td><td>2201-11-19 16:30:00</td><td></td><td>EMERGENCY</td><td>CLINIC REFERRAL/PREMATURE</td><td>SNF</td><td>Medicare</td><td>SPAN</td><td>CATHOLIC</td><td>MARRIED</td><td>HISPANIC/LATINO - PUERTO RICAN</td><td>2201-11-16 19:37:00</td><td>2201-11-17 00:20:00</td><td>SEPSIS; UTI</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40406</td><td>41976</td><td>179418</td><td>2201-12-31 19:19:00</td><td>2202-01-03 17:55:00</td><td></td><td>EMERGENCY</td><td>CLINIC REFERRAL/PREMATURE</td><td>SNF</td><td>Medicare</td><td>SPAN</td><td>CATHOLIC</td><td>MARRIED</td><td>HISPANIC/LATINO - PUERTO RICAN</td><td>2201-12-31 17:41:00</td><td>2201-12-31 23:05:00</td><td>PNEUMONIA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40407</td><td>41976</td><td>151798</td><td>2202-02-15 19:01:00</td><td>2202-02-19 16:42:00</td><td></td><td>EMERGENCY</td><td>CLINIC REFERRAL/PREMATURE</td><td>SNF</td><td>Medicare</td><td>SPAN</td><td>CATHOLIC</td><td>MARRIED</td><td>HISPANIC/LATINO - PUERTO RICAN</td><td>2202-02-15 16:35:00</td><td>2202-02-15 21:00:00</td><td>UTI/PYELONEPHRITIS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40408</td><td>41976</td><td>145024</td><td>2202-05-01 22:00:00</td><td>2202-05-04 18:42:00</td><td></td><td>EMERGENCY</td><td>TRANSFER FROM SKILLED NUR</td><td>SNF</td><td>Medicare</td><td>SPAN</td><td>CATHOLIC</td><td>MARRIED</td><td>HISPANIC/LATINO - PUERTO RICAN</td><td>2202-05-01 19:32:00</td><td>2202-05-01 23:30:00</td><td>RESPIRATORY DISTRESS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40409</td><td>41976</td><td>149469</td><td>2202-09-16 21:56:00</td><td>2202-09-23 16:20:00</td><td></td><td>EMERGENCY</td><td>CLINIC REFERRAL/PREMATURE</td><td>ICF</td><td>Medicare</td><td>SPAN</td><td>CATHOLIC</td><td>MARRIED</td><td>HISPANIC/LATINO - PUERTO RICAN</td><td>2202-09-16 18:24:00</td><td>2202-09-16 23:35:00</td><td>SEPSIS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40410</td><td>41976</td><td>153826</td><td>2202-10-03 01:45:00</td><td>2202-10-11 16:30:00</td><td></td><td>EMERGENCY</td><td>CLINIC REFERRAL/PREMATURE</td><td>ICF</td><td>Medicare</td><td>SPAN</td><td>CATHOLIC</td><td>MARRIED</td><td>HISPANIC/LATINO - PUERTO RICAN</td><td>2202-10-03 01:19:00</td><td>2202-10-03 03:40:00</td><td>SEPSIS</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40413</td><td>41983</td><td>107689</td><td>2151-09-12 17:04:00</td><td>2151-09-15 00:45:00</td><td>2151-09-15 00:45:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>ENGL</td><td>UNOBTAINABLE</td><td></td><td>WHITE</td><td>2151-09-12 14:37:00</td><td>2151-09-12 19:50:00</td><td>S/P FALL</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>40422</td><td>42033</td><td>154156</td><td>2131-07-26 17:13:00</td><td>2131-07-28 16:02:00</td><td>2131-07-28 16:02:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>ENGL</td><td>ROMANIAN EAST. ORTH</td><td>MARRIED</td><td>WHITE</td><td>2131-07-26 15:01:00</td><td>2131-07-26 18:24:00</td><td>SHORTNESS OF BREATH</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>40440</td><td>42066</td><td>171628</td><td>2112-02-04 14:49:00</td><td>2112-02-11 12:00:00</td><td>2112-02-11 12:00:00</td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>DEAD/EXPIRED</td><td>Private</td><td>ENGL</td><td>CATHOLIC</td><td>SINGLE</td><td>WHITE</td><td></td><td></td><td>TRACHEAL STENOSIS</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>40448</td><td>42075</td><td>151323</td><td>2166-02-12 17:57:00</td><td>2166-02-26 00:00:00</td><td>2166-02-26 00:00:00</td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>ENGL</td><td>UNOBTAINABLE</td><td>WIDOWED</td><td>UNABLE TO OBTAIN</td><td></td><td></td><td>INFERIOR MYOCARDIAL INFARCTION\CATH</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>40462</td><td>42135</td><td>102203</td><td>2127-07-23 15:21:00</td><td>2127-08-04 16:00:00</td><td></td><td>EMERGENCY</td><td>CLINIC REFERRAL/PREMATURE</td><td>HOME</td><td>Medicaid</td><td>ENGL</td><td>MUSLIM</td><td>MARRIED</td><td>AMERICAN INDIAN/ALASKA NATIVE FEDERALLY RECOGNIZED TRIBE</td><td></td><td></td><td>FAILURE TO THRIVE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40463</td><td>42135</td><td>117105</td><td>2127-10-06 21:00:00</td><td>2127-10-28 12:50:00</td><td>2127-10-28 12:50:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicaid</td><td>ENGL</td><td>MUSLIM</td><td>MARRIED</td><td>AMERICAN INDIAN/ALASKA NATIVE FEDERALLY RECOGNIZED TRIBE</td><td>2127-10-06 19:19:00</td><td>2127-10-06 22:26:00</td><td>HEPATIC ENCEP</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>40488</td><td>42199</td><td>178513</td><td>2117-03-21 12:55:00</td><td>2117-03-31 12:10:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>ENGL</td><td>PROTESTANT QUAKER</td><td>MARRIED</td><td>WHITE</td><td>2117-03-21 06:05:00</td><td>2117-03-21 15:03:00</td><td>CHEST PAIN</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40496</td><td>42231</td><td>171878</td><td>2102-08-29 07:15:00</td><td>2102-09-06 16:20:00</td><td></td><td>ELECTIVE</td><td>PHYS REFERRAL/NORMAL DELI</td><td>HOME HEALTH CARE</td><td>Medicare</td><td>ENGL</td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td></td><td></td><td>RENAL CANCER/SDA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40508</td><td>42275</td><td>128293</td><td>2135-10-24 20:28:00</td><td>2135-10-27 17:22:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME</td><td>Medicare</td><td>ENGL</td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td>2135-10-24 17:35:00</td><td>2135-10-24 23:22:00</td><td>SHORTNESS OF BREATH</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40509</td><td>42281</td><td>195911</td><td>2119-10-17 05:58:00</td><td>2119-11-14 09:30:00</td><td>2119-11-14 09:30:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>ENGL</td><td>NOT SPECIFIED</td><td>SINGLE</td><td>HISPANIC OR LATINO</td><td>2119-10-17 04:10:00</td><td>2119-10-17 08:44:00</td><td>UPPER GI BLEED</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>40512</td><td>42292</td><td>138503</td><td>2162-01-16 13:56:00</td><td>2162-01-19 13:45:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME</td><td>Private</td><td>ENGL</td><td>CATHOLIC</td><td>SINGLE</td><td>WHITE</td><td>2162-01-16 11:28:00</td><td>2162-01-16 16:12:00</td><td>PNEUMONIA/HYPOGLCEMIA/SYNCOPE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40514</td><td>42302</td><td>167754</td><td>2160-05-04 14:10:00</td><td>2160-05-08 11:55:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>ENGL</td><td>NOT SPECIFIED</td><td>SINGLE</td><td>WHITE</td><td>2160-05-04 11:05:00</td><td>2160-05-04 15:48:00</td><td>ASTHMA/COPD FLARE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40519</td><td>42321</td><td>114648</td><td>2121-12-07 20:49:00</td><td>2121-12-12 16:40:00</td><td></td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>SNF</td><td>Medicare</td><td>ENGL</td><td>OTHER</td><td>WIDOWED</td><td>OTHER</td><td></td><td></td><td>FAILURE TO THRIVE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40527</td><td>42346</td><td>180391</td><td>2160-12-16 13:47:00</td><td>2160-12-21 15:30:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>ENGL</td><td>NOT SPECIFIED</td><td>SINGLE</td><td>WHITE</td><td>2160-12-16 11:40:00</td><td>2160-12-16 15:08:00</td><td>PNEUMONIA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40528</td><td>42346</td><td>175880</td><td>2160-12-26 11:45:00</td><td>2160-12-27 07:45:00</td><td>2160-12-27 07:45:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>ENGL</td><td>NOT SPECIFIED</td><td>SINGLE</td><td>WHITE</td><td>2160-12-26 09:01:00</td><td>2160-12-26 12:39:00</td><td>VOLVULUS</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>40536</td><td>42367</td><td>139932</td><td>2147-10-03 16:10:00</td><td>2147-11-04 19:30:00</td><td>2147-11-04 19:30:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>ENGL</td><td>JEWISH</td><td>MARRIED</td><td>WHITE</td><td>2147-10-03 10:21:00</td><td>2147-10-03 17:16:00</td><td>SEIZURE;STATUS EPILEPTICUS</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>40552</td><td>42412</td><td>114867</td><td>2165-12-19 12:19:00</td><td>2165-12-25 14:20:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>SNF</td><td>Medicare</td><td>RUSS</td><td>JEWISH</td><td>MARRIED</td><td>WHITE</td><td>2165-12-19 10:16:00</td><td>2165-12-19 13:41:00</td><td>HYPOGLYCEMIA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40554</td><td>42430</td><td>100969</td><td>2142-11-26 21:20:00</td><td>2142-11-30 10:55:00</td><td>2142-11-30 10:55:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>ENGL</td><td>CHRISTIAN SCIENTIST</td><td></td><td>WHITE</td><td>2142-11-26 18:08:00</td><td>2142-11-26 22:18:00</td><td>CEREBROVASCULAR ACCIDENT</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>40565</td><td>42458</td><td>159647</td><td>2146-07-21 14:45:00</td><td>2146-07-22 14:45:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME</td><td>Medicare</td><td>ENGL</td><td>JEWISH</td><td>MARRIED</td><td>WHITE</td><td>2146-07-21 11:13:00</td><td>2146-07-21 15:59:00</td><td>PNEUMONIA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40952</td><td>43735</td><td>112662</td><td>2128-11-04 16:05:00</td><td>2128-11-09 12:00:00</td><td>2128-11-09 12:00:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>ENGL</td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td>2128-11-04 12:20:00</td><td>2128-11-04 17:11:00</td><td>HYPOTENSION</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>40958</td><td>43746</td><td>167181</td><td>2110-12-29 18:03:00</td><td>2111-01-14 15:19:00</td><td>2111-01-14 15:19:00</td><td>EMERGENCY</td><td>PHYS REFERRAL/NORMAL DELI</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>RUSS</td><td>JEWISH</td><td>WIDOWED</td><td>WHITE</td><td></td><td></td><td>METASTIC MELANOMA;ANEMIA</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>40959</td><td>43748</td><td>121860</td><td>2179-04-17 13:12:00</td><td>2179-04-23 12:55:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME HEALTH CARE</td><td>Medicare</td><td>ENGL</td><td>JEWISH</td><td>MARRIED</td><td>WHITE</td><td>2179-04-17 09:43:00</td><td>2179-04-17 14:46:00</td><td>HYPOTENSION, RENAL FAILURE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40966</td><td>43779</td><td>186071</td><td>2173-11-27 21:56:00</td><td>2173-11-30 15:50:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME HEALTH CARE</td><td>Medicare</td><td>ENGL</td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td>2173-11-27 18:12:00</td><td>2173-11-27 22:37:00</td><td>ACUTE SUBDURAL HEMATOMA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40972</td><td>43798</td><td>130870</td><td>2198-06-29 07:15:00</td><td>2198-08-07 23:59:00</td><td></td><td>ELECTIVE</td><td>PHYS REFERRAL/NORMAL DELI</td><td>HOME HEALTH CARE</td><td>Private</td><td>ENGL</td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td></td><td></td><td>ESOPHAGEAL CA/SDA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40981</td><td>43827</td><td>149950</td><td>2176-07-14 13:24:00</td><td>2176-07-18 15:00:00</td><td></td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>HOME HEALTH CARE</td><td>Medicare</td><td>ENGL</td><td>CATHOLIC</td><td>SINGLE</td><td>UNKNOWN/NOT SPECIFIED</td><td></td><td></td><td>MI CHF</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40987</td><td>43870</td><td>142633</td><td>2186-02-09 21:32:00</td><td>2186-02-12 00:07:00</td><td>2186-02-12 00:07:00</td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>ENGL</td><td>CATHOLIC</td><td>MARRIED</td><td>WHITE</td><td>2186-02-09 17:27:00</td><td>2186-02-09 22:36:00</td><td>STROKE/TIA</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>40992</td><td>43879</td><td>158100</td><td>2106-08-30 15:43:00</td><td>2106-08-31 15:15:00</td><td></td><td>EMERGENCY</td><td>CLINIC REFERRAL/PREMATURE</td><td>HOME</td><td>Medicare</td><td>ENGL</td><td>PROTESTANT QUAKER</td><td>MARRIED</td><td>BLACK/AFRICAN AMERICAN</td><td></td><td></td><td>PLEURAL EFFUSION</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40993</td><td>43881</td><td>172454</td><td>2104-09-24 17:31:00</td><td>2104-09-30 16:17:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME HEALTH CARE</td><td>Private</td><td>ENGL</td><td>NOT SPECIFIED</td><td>MARRIED</td><td>WHITE</td><td>2104-09-24 12:07:00</td><td>2104-09-24 18:50:00</td><td>ACUTE PULMONARY EMBOLISM</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40994</td><td>43881</td><td>167021</td><td>2104-10-24 09:44:00</td><td>2104-11-01 11:59:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME</td><td>Private</td><td>ENGL</td><td>NOT SPECIFIED</td><td>MARRIED</td><td>WHITE</td><td>2104-10-24 07:17:00</td><td>2104-10-24 11:10:00</td><td>UPPER GI BLEED</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>40998</td><td>43909</td><td>167612</td><td>2152-10-09 19:05:00</td><td>2152-10-09 22:33:00</td><td>2152-10-09 22:33:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>RUSS</td><td>UNOBTAINABLE</td><td></td><td>WHITE</td><td>2152-10-09 17:00:00</td><td>2152-10-09 19:54:00</td><td>PNEUMONIA;TELEMETRY</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>41005</td><td>43927</td><td>110958</td><td>2175-10-02 12:30:00</td><td>2175-10-06 15:00:00</td><td></td><td>ELECTIVE</td><td>PHYS REFERRAL/NORMAL DELI</td><td>SNF</td><td>Medicare</td><td>ENGL</td><td>CATHOLIC</td><td>WIDOWED</td><td>WHITE</td><td></td><td></td><td>CORONARY ARTERY DISEASE\CORONARY ARTERY BYPASS GRAFT /SDA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>41053</td><td>44083</td><td>125157</td><td>2112-05-04 08:00:00</td><td>2112-05-11 14:15:00</td><td></td><td>ELECTIVE</td><td>PHYS REFERRAL/NORMAL DELI</td><td>HOME HEALTH CARE</td><td>Private</td><td>ENGL</td><td>CATHOLIC</td><td>SINGLE</td><td>WHITE</td><td></td><td></td><td>ESOPHAGEAL CA/SDA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>41054</td><td>44083</td><td>131048</td><td>2112-05-22 15:37:00</td><td>2112-05-25 13:30:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME HEALTH CARE</td><td>Private</td><td>ENGL</td><td>CATHOLIC</td><td>SINGLE</td><td>WHITE</td><td>2112-05-22 09:25:00</td><td>2112-05-22 17:04:00</td><td>SHORTNESS OF BREATH</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>41055</td><td>44083</td><td>198330</td><td>2112-05-28 15:45:00</td><td>2112-06-07 16:50:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME</td><td>Private</td><td>ENGL</td><td>CATHOLIC</td><td>SINGLE</td><td>WHITE</td><td>2112-05-28 13:16:00</td><td>2112-05-28 17:30:00</td><td>PERICARDIAL EFFUSION</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>41070</td><td>44154</td><td>174245</td><td>2178-05-14 20:29:00</td><td>2178-05-15 09:45:00</td><td>2178-05-15 09:45:00</td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>DEAD/EXPIRED</td><td>Medicare</td><td>ENGL</td><td>PROTESTANT QUAKER</td><td>MARRIED</td><td>WHITE</td><td>2178-05-14 17:37:00</td><td>2178-05-14 22:08:00</td><td>ALTERED MENTAL STATUS</td><td>1</td><td>1</td></tr>
+    
+    <tr><td>41087</td><td>44212</td><td>163189</td><td>2123-11-24 14:14:00</td><td>2123-12-30 14:31:00</td><td></td><td>EMERGENCY</td><td>TRANSFER FROM HOSP/EXTRAM</td><td>REHAB/DISTINCT PART HOSP</td><td>Medicare</td><td>ENGL</td><td>UNOBTAINABLE</td><td>SINGLE</td><td>BLACK/AFRICAN AMERICAN</td><td></td><td></td><td>ACUTE RESPIRATORY DISTRESS SYNDROME;ACUTE RENAL FAILURE</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>41090</td><td>44222</td><td>192189</td><td>2180-07-19 06:55:00</td><td>2180-07-20 13:00:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME</td><td>Medicare</td><td>ENGL</td><td>CATHOLIC</td><td>SINGLE</td><td>WHITE</td><td>2180-07-19 04:50:00</td><td>2180-07-19 08:23:00</td><td>BRADYCARDIA</td><td>0</td><td>1</td></tr>
+    
+    <tr><td>41092</td><td>44228</td><td>103379</td><td>2170-12-15 03:14:00</td><td>2170-12-24 18:00:00</td><td></td><td>EMERGENCY</td><td>EMERGENCY ROOM ADMIT</td><td>HOME HEALTH CARE</td><td>Private</td><td>ENGL</td><td>NOT SPECIFIED</td><td>SINGLE</td><td>WHITE</td><td>2170-12-15 02:22:00</td><td>2170-12-15 05:25:00</td><td>CHOLANGITIS</td><td>0</td><td>1</td></tr>
+    
+  </tbody>
+</table>
+
+    </div>
+    
+
+
+  </div>
+</div>
+</main>
+
+    <!-- This footer template is from the bootstrap 'blog' example -->
+
+<link rel="stylesheet" type="text/css" href="/static/custom/css/footer.css"/>
+
+<footer class="blog-footer">
+  <div class="container">
+    <div class="row row-centered">
+      <div class="col-xs-10 center col-centered">
+        <p>PhysioNet is a repository of freely-available medical research data, managed by the MIT Laboratory for Computational Physiology.</p>
+        <p>Supported by the National Institute of Biomedical Imaging and Bioengineering (NIBIB) under NIH grant number R01EB030362.</p>
+        
+          <p>For more accessibility options, see the <a href='https://accessibility.mit.edu/'>MIT Accessibility Page</a>.</p>
+        
+        <p><a href="#">Back to top</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+    
+    
+  </body>
+  
+</html>
